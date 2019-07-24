@@ -13,5 +13,7 @@
 	<classpathentry kind="lib" path="ExternalLib/mail.jar"/>
 	<classpathentry kind="lib" path="ExternalLib/activation.jar"/>
 	<classpathentry kind="con" path="org.eclipse.jdt.junit.JUNIT_CONTAINER/3"/>
+	<classpathentry kind="lib" path="ExternalLib/dom4j-2.1.1.jar"/>
+	<classpathentry kind="lib" path="ExternalLib/jaxen-1.1.4.jar"/>
 	<classpathentry kind="output" path="bin"/>
 </classpath>

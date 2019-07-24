@@ -11,6 +11,8 @@ import java.util.Date;
  */
 public class CommonConfig {	  
 	
+	public static String reportFolder = ".";
+	
 	public static String driverPath() {  
 	    return "..\\ExternalLib\\chromedriver.exe" ;
 	}

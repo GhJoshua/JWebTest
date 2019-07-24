@@ -1,7 +1,6 @@
 /**
- * @author Joshua
- * @version V1.0
- * @date 2019年7月22日下午2:58:20
+ * @author Jiahui.Wang
+ * @version V1.0 2019年7月22日下午2:58:20
  */
 package test.testcase;
 
@@ -18,11 +17,25 @@ public class Test_SearchBox extends TestCase {
 	String baseUrl = CommonConfig.baseUrl();
 	GoogleMainPage googleSearch = null;	
 		
+	/**
+	 * @return the testCaseInfo
+	 */
+	public TestCaseInfo getTestCaseInfo() {
+		return testCaseInfo;
+	}
+	
+	/**
+	 * @param testCaseInfo the testCaseInfo to set
+	 */
+	public void setTestCaseInfo(TestCaseInfo testCaseInfo) {
+		this.testCaseInfo = testCaseInfo;
+	}
+	
 	protected void setUp() throws Exception {
 		//super.setUp();
 		testCaseInfo = new TestCaseInfo(1, "testSearch", "Joshua", false,new Date() , new Date(), 0.02, null);
 		//LogUtility.createLogFile(""); TODO
-		LogUtility.log("test search starts.");
+		LogUtility.log("Testcase named testSearch starts.");
 	}
 	
 	public void testSearch() {
@@ -30,7 +43,7 @@ public class Test_SearchBox extends TestCase {
 			testCaseInfo.startTime = new Date();//CommonConfig.getCurrentTime();
 			
 			// Step1: open base site
-			LogUtility.log("Open base site: " + baseUrl);
+			LogUtility.log("testSearch: Open base site: " + baseUrl);
 			googleSearch = new GoogleMainPage();
 			
 			googleSearch.open(baseUrl);
@@ -41,10 +54,10 @@ public class Test_SearchBox extends TestCase {
 			assertTrue(googleSearch.getTitle().contains("Java"));
 			testCaseInfo.result = true;
 			
-			LogUtility.log("Open the site successfully.");
+			LogUtility.log("testSearch: Open the site successfully.");
 		}catch(Exception e) {
 			testCaseInfo.result =false;
-			LogUtility.log("Failed. Test case error: " + e.toString());
+			LogUtility.log("testSearch Failed. Test case error: " + e.toString());
 		}
 	}
 	

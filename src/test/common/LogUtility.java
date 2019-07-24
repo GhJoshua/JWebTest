@@ -11,6 +11,9 @@ import org.apache.commons.logging.LogFactory;
  * 
  */
 public class LogUtility {
+	
+	public static Log logger = LogFactory.getLog(LogUtility.class);	
+	
 	/***
 	 * TODO: Not implemented yet
 	 * @param filename
@@ -31,7 +34,7 @@ public class LogUtility {
 	}
 	
 	/***
-	 * To log a message
+	 * To log a message, didn't set location TODO: set log's location
 	 * @param message, string to be logged message
 	 */
 	public static void log(String message) {
@@ -39,7 +42,6 @@ public class LogUtility {
 	}
 	
 	// Test
-	public static Log logger = LogFactory.getLog(LogUtility.class);	
 	/***
 	 * Main method only used for testing purpose to run this class as an application
 	 * @param args
