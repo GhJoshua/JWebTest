@@ -24,7 +24,7 @@ public class MailUtility {
 	private static String mailSenderUserName = "wangjiahui.boss@qq.com";
 	private static String mailSenderPassword = "umjhlxhnolqdcaad"; // Authenticated code when opening POP3/SMTP
 	
-	public static void sendEmail(MailInfo mailInfo) throws Throwable {
+	//public static void sendEmail(MailInfo mailInfo) throws Throwable {
 		try {
 			HtmlEmail email = new HtmlEmail();
 			// configuration
